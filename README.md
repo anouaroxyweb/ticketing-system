@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🎫 Ticketing System
 
 A modern and powerful **ticket management platform** built with **React + Node.js (Express) + PostgreSQL + Prisma + TailwindCSS**.  
@@ -63,3 +64,6 @@ It allows users to create support tickets, and gives support staff and admins to
 <img src="./ticket.png" alt="Ticket Page" width="700"/>
 
 </div>
+=======
+# Ticketing System Project
+>>>>>>> e5a6322 (Add README with project info and screenshots)
