@@ -1,0 +1,76 @@
+// ============================
+// Prisma Schema Configuration
+// ============================
+
+// اتصال قاعدة البيانات
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// إعداد الـ Prisma Client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ============================
+// ENUMS (ثوابت ثابتة القيم)
+// ============================
+
+enum Role {
+  user
+  support
+  admin
+}
+
+enum TicketStatus {
+  open
+  in_progress
+  resolved
+  closed
+}
+
+// ============================
+// MODELS (الجداول)
+// ============================
+
+// جدول المستخدمين
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  email      String   @unique
+  password   String
+  role       Role     @default(user)
+  created_at DateTime @default(now())
+  tickets    Ticket[]
+  comments   Comment[]
+
+  @@map("users") // ربط الموديل بجدول users الحقيقي في قاعدة البيانات
+}
+
+// جدول التذاكر (Tickets)
+model Ticket {
+  id          Int           @id @default(autoincrement())
+  title       String
+  description String?
+  status      TicketStatus  @default(open)
+  user        User          @relation(fields: [user_id], references: [id])
+  user_id     Int
+  created_at  DateTime      @default(now())
+  comments    Comment[]
+
+  @@map("tickets") // ربط الموديل بجدول tickets الحقيقي
+}
+
+// جدول التعليقات (Comments)
+model Comment {
+  id          Int      @id @default(autoincrement())
+  content     String
+  user        User     @relation(fields: [user_id], references: [id])
+  user_id     Int
+  ticket      Ticket   @relation(fields: [ticket_id], references: [id])
+  ticket_id   Int
+  created_at  DateTime @default(now())
+
+  @@map("comments") // ربط الموديل بجدول comments الحقيقي
+}
