@@ -47,12 +47,19 @@ It allows users to create support tickets, and gives support staff and admins to
 
 ---
 
-## ⚙️ Installation & Setup
+---
 
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/anouaroxyweb/ticketing-system.git
-cd ticketing-system
-<img width="1352" height="650" alt="login" src="https://github.com/user-attachments/assets/58a2b809-f1ea-46df-bcf0-5ed3adf5dceb" />
-<img width="1346" height="645" alt="landing" src="https://github.com/user-attachments/assets/6fb6433a-3286-475a-a6b6-1b197c6d04bd" />
-<img width="1350" height="641" alt="ticket" src="https://github.com/user-attachments/assets/65abdc03-e99a-4968-a20a-244799329d9a" />
+## 🖼️ Screenshots
+
+<div align="center">
+
+### 🏠 Landing Page  
+<img src="./landing.png" alt="Landing Page" width="700"/>
+
+### 🔐 Login Page  
+<img src="./login.png" alt="Login Page" width="700"/>
+
+### 🎟️ Ticket Page  
+<img src="./ticket.png" alt="Ticket Page" width="700"/>
+
+</div>
