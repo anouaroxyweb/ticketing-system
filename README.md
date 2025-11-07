@@ -48,22 +48,4 @@ It allows users to create support tickets, and gives support staff and admins to
 
 ---
 
----
 
-## 🖼️ Screenshots
-
-<div align="center">
-
-### 🏠 Landing Page  
-<img src="./landing.png" alt="Landing Page" width="700"/>
-
-### 🔐 Login Page  
-<img src="./login.png" alt="Login Page" width="700"/>
-
-### 🎟️ Ticket Page  
-<img src="./ticket.png" alt="Ticket Page" width="700"/>
-
-</div>
-=======
-# Ticketing System Project
->>>>>>> e5a6322 (Add README with project info and screenshots)
